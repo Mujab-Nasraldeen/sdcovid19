@@ -1,0 +1,488 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Covid19 Sudan</title>
+  <link rel="shortcut icon" href="{% static '/img/ic.png' %}">
+  <!-- Custom fonts for this template-->
+
+  <link href="{% static '/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="{% static '/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'Dashboard' %}">
+        <div class="sidebar-brand-icon">
+          <i class="fas fa-house-user fa-fw"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">#Be_Safety </div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'Dashboard' %}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Healthy Tips
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" >
+          <span>Be</span>
+          <i class="fas fa-people-arrows fa-fw"></i>
+
+        </a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <span>Dont</span>
+          <i class="fas fa-handshake-slash fa-fw"></i>
+        </a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <span>Use</span>
+          <i class="fas fa-pump-medical fa-fw"></i>
+        </a>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <span>Wash your</span>
+          <i class="fas fa-hands-wash fa-fw"></i>
+          <span>About 40sec</span>
+        </a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <span>Good</span>
+          <i class="fas fa-hand-sparkles fa-fw"></i>
+          <span>Safety</span>
+        </a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Search -->
+          <div class="">
+
+          </div>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+
+
+            <!-- Nav Item - Tweeter -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="https://twitter.com/MujabNasraldeen" target="_blank">
+                <i class="fab fa-twitter" style='font-size:25px;'></i>
+              </a>
+            </li>
+
+            <!-- Nav Item - Instgram -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="https://www.instagram.com/mujab_da_silva/" target="_blank">
+                <i class="fab fa-instagram" style='font-size:25px;'></i>
+              </a>
+            </li>
+
+            <!-- Nav Item - LinkedIn -->
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="https://www.linkedin.com/in/mujab-nasraldeen-767926173/" target="_blank">
+                <i class="fab fa-linkedin" style='font-size:25px;'></i>
+              </a>
+            </li>
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Mujaß Nasraldeen</span>
+                <img class="img-profile rounded-circle" src="{% static '/img/avt.jfif' %}">
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">Mujaß Nasraldeen</a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Statistics</h1>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">All Cases</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{ cases }} case</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-lungs-virus fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Today Cases</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{ tdCases }} case</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-users-medical fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Active Cases</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{ actCases }} case</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fad fa-hospital-user fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-secondary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Today Deaths</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{ tdDeaths }} case</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fal fa-tombstone-alt fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <!-- Pending Requests Card Example -->
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Recovered Cases</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{ recovered }} case</div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fal fa-virus-slash fa-2x text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Pending Requests Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Critical Cases</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ critical }} case</div>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-briefcase-medical fa-2x text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- Pending Requests Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-secondary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Death Cases</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ deaths }} case</div>
+              </div>
+              <div class="col-auto">
+                <i class="fal fa-tombstone-alt fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pending Requests Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">The statistics are not reassuring</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">Please <i class="fal fa-shield-virus"></i> </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-house-user fa-fw fa-2x text-gray-300"></i>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+          <!-- Content Row -->
+
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">How is Covid-19 disease spread?</h6>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="{% static '/img/undraw_social_distancing.svg' %}" alt="">
+                  </div>
+                  <p>People can become infected with Covid-19 disease by other people who have the virus. The disease can be transmitted from person to person through small droplets scattered from the nose or mouth when a person with Covid-19 disease coughs or sneezes. These droplets fall on the objects and surfaces surrounding the person. Other people can then develop Covid-19 disease when they come into contact with these objects or surfaces and then touch their eyes, nose, or mouth. People can also get Covid-19 disease if they breathe droplets that come out of the person with the disease with a cough or exhale. So it is important to stay away from the sick person more than one meter (3 feet).</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Chart <i class="far fa-chart-pie-alt"></i></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="myPieChart"></canvas>
+                  </div>
+                  <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-danger"></i> AllCases
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-primary"></i> Actives
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-success"></i> Recovered
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-secondary"></i> Death
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Content Column -->
+            <div class="col-lg-6 mb-4">
+              <!-- Illustrations -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">What are the symptoms of Covid-19 disease?</h6>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="{% static '/img/undraw_medical_care_movn.svg' %}" alt="">
+                  </div>
+                  <p>The most common symptoms of Covid-19 disease are fever, fatigue, and dry cough. Some patients may experience pain and aches, nasal congestion, cold, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Some people become infected without showing any symptoms and without feeling ill. Most people (about 80%) recover from the disease without the need for special treatment. And the severity of the disease intensifies in approximately one person out of every 6 people who develop Covid-19 infection, who suffer from difficulty breathing. The risk of the elderly and people with basic medical problems such as high blood pressure, heart disease or diabetes is severe. About 2% of people who have contracted the disease have died. People with fever, cough and difficulty breathing should seek medical care.</p>
+                </div>
+              </div>
+
+              <!-- Approach -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">About Me #Mujab_Nasraldeen</h6>
+                </div>
+                <div class="card-body">
+                  <p>Born: March 17, 1998</p>
+                  <p>Study: Al-neelain UN</p>
+                  <p class="mb-0">IT Specialist - Web Developer in love with Django <i class="fas fa-heart"></i></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <!-- Illustrations -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">About Covid-19 disease and this web app</h6>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="{% static '/img/undraw_posting_photo.svg' %}" alt="">
+                  </div>
+                  <p>Covid-19 disease is an infectious disease caused by the newly discovered Coronavirus. There was no knowledge of this virus and this emerging disease before the outbreak of outbreak in the Chinese city of Johan in December 2019.
+                     And this site to follow the latest changes in daily statistics about Corona disease in Sudan</p>
+                  <a target="_blank" rel="nofollow" href="https://covid19.sd/">Information From Official Site &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Approach -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Web App Development</h6>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="{% static '/img/web_developer.svg' %}" alt="">
+                  </div>
+                  <p>Web app can work as native app .. Please, #StayHome invest your time and learn new things</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Covid19 Sudan {% now 'Y' %} - Stay Home <i class="fas fa-house-user fa-fw"></i> Be Safety <i class="fas fa-heart"></i></span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static '/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{% static '/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{% static '/js/sb-admin-2.min.js' %}"></script>
+
+  <!-- Page level plugins -->
+  <script src="{% static '/vendor/chart.js/Chart.min.js'%}"></script>
+
+  <!-- Page level custom scripts -->
+  <script type="text/javascript"> var data = ["{{ cases }}","{{ actCases }}", "{{ recovered }}", "{{ deaths }}"]; </script>
+  <script src="{% static '/js/demo/chart-pie-demo.js' %}"></script>
+
+</body>
+
+</html>
